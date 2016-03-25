@@ -10,6 +10,7 @@
     "build": "cd ./client && npm run build",
     "release": "cd ./client && npm run release",
     "hot": "cd ./client && npm run hot",
+    "laser": "cd ./client && npm run laser",
     "test": "cd ./client && npm run test",
     "coveralls": "cd ./client && npm run coveralls"
   },

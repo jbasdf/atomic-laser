@@ -10,6 +10,7 @@
     "test": "./node_modules/karma/bin/karma start",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "hot": "gulp watch & node webpack.hot.js",
+    "laser": "gulp watch & node webpack.laser.js",
     "build_dev": "gulp build",
     "build": "gulp build --release",
     "release": "gulp build --release && cd .. && s3_website push",
