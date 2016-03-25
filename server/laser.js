@@ -1,12 +1,11 @@
 var EtherDream = require('./etherdream.js').EtherDream;
 
-function sendframe(connection, data, callback) {
-  console.log('send frame');
-  connection.write(data, 30000, function() {
-    console.log('frame written.');
-    callback();
-  });
+var currentData;
+
+module.exports = function(data){
+  currentData = data;
 }
+
 
 EtherDream.findFirst(function(all) {
   if (all.length == 0) {
@@ -76,7 +75,14 @@ EtherDream.findFirst(function(all) {
     }
 
     function renderframe(phase, callback) {
+
       var framedata = [];
+
+      if(!currentData){
+        callback(framedata);
+        return;
+      }
+
       var shouldfill = conn.fullness < 1000;
 
       var scale = 0.20;

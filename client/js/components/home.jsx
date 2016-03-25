@@ -2,8 +2,17 @@
 
 import React                    from 'react';
 import assets                   from '../libs/assets';
+import Api                      from '../libs/api';
 
 class Home extends React.Component {
+
+  start(){
+    Api.post('/laser_start', '', null, null, {}, {});
+  }
+
+  stop(){
+    Api.post('/laser_stop', '', null, null, {}, {});
+  }
 
   render(){
     
@@ -11,6 +20,8 @@ class Home extends React.Component {
 
     return<div>
       <img src={img} />
+      <button onClick={(e) => { e.preventDefault(); this.start(); }}>Start</button>
+      <button onClick={(e) => { e.preventDefault(); this.stop(); }}>Stop</button>
     </div>;
   }
 
