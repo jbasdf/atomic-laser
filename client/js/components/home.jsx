@@ -15,10 +15,10 @@ class Home extends React.Component {
   }
 
   render(){
-    
+
     const img = assets("./images/atomicjolt.jpg");
 
-    return<div>
+    return <div>
       <img src={img} />
       <button onClick={(e) => { e.preventDefault(); this.start(); }}>Start</button>
       <button onClick={(e) => { e.preventDefault(); this.stop(); }}>Stop</button>

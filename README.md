@@ -3,19 +3,32 @@
 
 Assuming you have git and npm installed:
 
-1. git clone https://github.com/atomicjolt/react_client_starter_app.git my_project_name
+1. git clone https://github.com/jbasdf/atomic-laser.git my_project_name
 2. Rename .env.example to .env and change the values as desired. The default should be fine.
 3. npm install
 4. Start server with:
 
-  `npm run hot`
+  `npm run laser`
 
-then visit http://localhost:8080
+then visit http://localhost:8090
 
 
 #Development:
 -----------------------
 Source code lives in the client directory. Modify html and js files in that directory to build your application.
+
+An etherdream is required to run.
+
+Based on this bit of awesome code:
+https://github.com/possan/node-etherdream
+
+Links:
+  https://github.com/possan/ilda.js
+
+  Games:
+    https://github.com/ohall/react-pong
+    https://github.com/chriz001/Reacteroids
+
 
 ## React.js
 -----------
